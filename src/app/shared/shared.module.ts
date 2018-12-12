@@ -3,6 +3,7 @@ import { MaterialModule } from './material.module';
 import { FormsModule } from '@angular/forms';
 import { TruncPipe } from './pipes/trunc.pipe';
 import { HttpClientModule } from '@angular/common/http';
+import { ApiService } from './api.service';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,9 @@ import { HttpClientModule } from '@angular/common/http';
     MaterialModule,
     FormsModule,
     TruncPipe
+  ],
+  providers: [
+    ApiService
   ]
 })
 export class SharedModule { }

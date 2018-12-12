@@ -3,8 +3,10 @@
   <!-- space -->
   <span class="space"></span>
   <!-- icone -->
-  <mat-icon class="menu-item">home</mat-icon>
+  <mat-icon class="menu-item" routerLink="/home" routerLinkActive="active">home</mat-icon>
   <!-- links -->
-  <span class="menu-item">Link</span>
-  <span class="menu-item">Link</span>
+  <span *ngIf="isLoggedIn()" class="menu-item" routerLink="/products" routerLinkActive="active">Products</span>
+  <span id="loginLink" *ngIf="!isLoggedIn()" class="menu-item" routerLink="/login" routerLinkActive="active">Login</span>
+
+  <mat-icon matBadge="{{productList.length}}" matBadgeColor="warn">shopping_cart</mat-icon>
 </mat-toolbar>
