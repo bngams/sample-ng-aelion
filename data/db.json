@@ -1,0 +1,14 @@
+{
+    "product": [
+        {
+            "id": 1,
+            "name": "Surface",
+            "price": 600
+        },
+        {
+            "id": 2,
+            "name": "iMac",
+            "price": 900
+        }
+    ]
+}

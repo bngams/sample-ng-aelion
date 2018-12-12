@@ -1,22 +1,30 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProductFormComponent } from './product-form/product-form.component';
+import { ProductDashboardComponent } from './product-dashboard/product-dashboard.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductCardComponent } from './product-card/product-card.component';
-import { MaterialModule } from '../material.module';
+import { SharedModule } from '../shared/shared.module';
+import { ProductFormComponent } from './product-form/product-form.component';
+import { PromoDirective } from './directives/promo.directive';
+import { ProductService } from './product.service';
 
 @NgModule({
   declarations: [
+    ProductDashboardComponent,
     ProductFormComponent,
     ProductListComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    PromoDirective
   ],
   imports: [
     CommonModule,
-    MaterialModule
+    SharedModule
   ],
   exports: [
-    ProductFormComponent
+    ProductDashboardComponent
+  ],
+  providers: [
+    ProductService
   ]
 })
 export class ProductModule { }

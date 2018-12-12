@@ -1,9 +1,9 @@
 <form>
   <mat-form-field>
-    <input matInput placeholder="Name" name="name">
+    <input matInput placeholder="Name" name="name" [(ngModel)]="product.name">
   </mat-form-field>
   <mat-form-field>
-    <input matInput placeholder="Price" name="price">
+    <input matInput placeholder="Price" name="price" [(ngModel)]="product.price">
   </mat-form-field>
-  <button mat-raised-button color="primary">Add</button>
+  <button type="button" mat-raised-button color="primary" (click)="submit()">Add</button>
 </form>
